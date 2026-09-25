@@ -12,7 +12,7 @@ from urllib.parse import SplitResult, urlparse, urlsplit
 import pandas as pd
 import tldextract
 
-from src.config import (
+from url_phishing_classification.config import (
     REDIRECT_KEYWORDS,
     SCHEME_PATTERN,
     SHORTENING_SERVICES,

@@ -7,7 +7,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from src.preprocessing import deduplicate_urls, engineer_features, normalize_url
+from url_phishing_classification.preprocessing import deduplicate_urls, engineer_features, normalize_url
 
 
 def parse_args() -> argparse.Namespace:
