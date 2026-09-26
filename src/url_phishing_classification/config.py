@@ -136,3 +136,7 @@ FINAL_MODEL_SPEC = ModelSpec(
     features=ALL_ENGINEERED_FEATURES,
     C=C_PARAM,
 )
+
+
+# inference
+OPERATING_THRESHOLD = 0.95
