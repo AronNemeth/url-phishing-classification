@@ -287,6 +287,8 @@ def engineer_features(df: pd.DataFrame, url_column: str = "url") -> pd.DataFrame
         non_alphanumeric_count=urls.str.count(r"[^A-Za-z0-9]"),
         # URL-wide signals
         digit_ratio=[_digit_ratio(value) for value in url_values],
+        url_letter_ratio=urls.str.count(r"[A-Za-z]") / urls.str.len().clip(lower=1),
+        url_non_alphanumeric_ratio=urls.str.count(r"[^A-Za-z0-9]") / urls.str.len().clip(lower=1),
         has_at=urls.str.contains("@", regex=False),
         has_percent_encoding=urls.str.contains(r"%[0-9A-Fa-f]{2}", regex=True),
         has_punycode=hostname.str.contains("xn--", regex=False),
