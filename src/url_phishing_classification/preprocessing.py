@@ -20,7 +20,8 @@ from url_phishing_classification.config import (
     SUSPICIOUS_TLDS,
 )
 
-TLD_EXTRACT = tldextract.TLDExtract()
+# for offline inference, disable TLD extraction cache and suffix list updates
+TLD_EXTRACT = tldextract.TLDExtract(suffix_list_urls=(), cache_dir=None)
 
 
 @dataclass(frozen=True)
